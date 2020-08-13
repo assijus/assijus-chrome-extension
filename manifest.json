@@ -1,18 +1,20 @@
 {
   "name": "Assijus Signer",
-  "version": "1.2.9.1",
+  "version": "1.2.9.6",
   "background": { "scripts": ["background.js"] },
   "content_scripts": [
     {
-      "matches": ["https://assijus.trf2.jus.br/assijus/*","https://assijus.jfrj.jus.br/assijus/*",
-        "*://sigat.jfrj.jus.br/assijus/*","*://csis-trf-10.corp.jfrj.gov.br/assijus/*","*://localhost/assijus/*"],
+      "matches": ["https://assijus.trf2.jus.br/assijus/*","https://assijus.jfrj.jus.br/assijus/*","https://assijus.trf4.jus.br/*",
+        "https://assijus.homologacao.spsempapel.sp.gov.br/*","https://assijus.spsempapel.sp.gov.br/*",
+        "*://sigat.jfrj.jus.br/assijus/*","https://sigah.jfrj.jus.br/assijus/*","https://assijush.jfrj.jus.br/assijus/*","*://csis-trf-10.corp.jfrj.gov.br/assijus/*","*://localhost/assijus/*"],
       "js": ["contentscript.js"]
     }
   ],
-  "permissions": ["nativeMessaging", "tabs"],
+  "permissions": ["nativeMessaging"],
   "externally_connectable": {
-    "matches": ["https://assijus.trf2.jus.br/assijus/*","https://assijus.jfrj.jus.br/assijus/*",
-    "*://sigat.jfrj.jus.br/assijus/*","*://csis-trf-10.corp.jfrj.gov.br/assijus/*","*://localhost/assijus/*"]
+    "matches": ["https://assijus.trf2.jus.br/assijus/*","https://assijus.jfrj.jus.br/assijus/*","https://assijus.trf4.jus.br/*",
+      "https://assijus.homologacao.spsempapel.sp.gov.br/*","https://assijus.spsempapel.sp.gov.br/*",
+      "*://sigat.jfrj.jus.br/assijus/*","https://sigah.jfrj.jus.br/assijus/*","https://assijush.jfrj.jus.br/assijus/*","*://csis-trf-10.corp.jfrj.gov.br/assijus/*","*://localhost/assijus/*"]
   },
   "browser_action": {
     "default_icon": {

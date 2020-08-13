@@ -56,6 +56,6 @@ var sendToNativeSigner = function(request, sender, sendResponse) {
 //chrome.runtime.onMessageExternal.addListener(redirectToLocalhost);
 chrome.runtime.onMessageExternal.addListener(sendToNativeSigner);
 
-chrome.browserAction.onClicked.addListener(function() {
-  chrome.tabs.create({url: "https://assijus.jfrj.jus.br"}, function(tab) {});
-});
+// chrome.browserAction.onClicked.addListener(function() {
+//   chrome.tabs.create({url: "https://assijus.jfrj.jus.br"}, function(tab) {});
+// });
