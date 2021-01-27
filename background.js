@@ -42,7 +42,17 @@ port.onDisconnect.addListener(function() {
 });
 
 
-var sendToNativeSigner = function(request, sender, sendResponse) {
+var processMessage = function(request, sender, sendResponse) {
+  if (request.url.substring(request.url.length - '/test-extension'.length) == '/test-extension') {
+    var version;
+    try {
+      version = chrome.runtime.getManifest().version;
+    } catch (ex) {
+      version = '1';
+    }
+    sendResponse({success: true, data: {version: version}})
+    return false;
+  }
   senderCallback = sendResponse;
 	try {
 		port.postMessage(request);
@@ -54,7 +64,7 @@ var sendToNativeSigner = function(request, sender, sendResponse) {
 }
 
 //chrome.runtime.onMessageExternal.addListener(redirectToLocalhost);
-chrome.runtime.onMessageExternal.addListener(sendToNativeSigner);
+chrome.runtime.onMessageExternal.addListener(processMessage);
 
 // chrome.browserAction.onClicked.addListener(function() {
 //   chrome.tabs.create({url: "https://assijus.jfrj.jus.br"}, function(tab) {});
