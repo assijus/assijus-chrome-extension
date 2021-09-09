@@ -1,13 +1,15 @@
 {
   "name": "Assijus Signer",
-  "version": "1.3.0.1",
+  "version": "1.3.0.2",
   "background": { "scripts": ["background.js"] },
   "permissions": ["nativeMessaging"],
   "externally_connectable": {
     "matches": ["https://assijus.trf2.jus.br/assijus/*","https://assijus.jfrj.jus.br/assijus/*","https://assijus.trf4.jus.br/*",
       "https://assijus.homologacao.spsempapel.sp.gov.br/*","https://assijus.spsempapel.sp.gov.br/*",
       "*://sigat.jfrj.jus.br/assijus/*","https://sigah.jfrj.jus.br/assijus/*","https://assijush.jfrj.jus.br/assijus/*",
-      "*://homologa.assijus.mt.gov.br/assijus/*","*://assijus.mt.gov.br/assijus/*","*://localhost/assijus/*"]
+      "*://homologa.assijus.mt.gov.br/assijus/*","*://assijus.mt.gov.br/assijus/*",
+      "*://assijus.processo.rio/assijus/*","*://assijush.processo.rio/assijus/*",
+      "*://localhost/assijus/*"]
   },
   "browser_action": {
     "default_icon": {
